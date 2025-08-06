@@ -1,0 +1,101 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background: hsl(0, 39%, 81%);
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #150404;
+  }
+  
+  .pet {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(15, 218, 96, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .pet:hover {
+    transform: scale(1.05);
+  
+  }
+  
+  #counter {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: #9e6868;
+  }
+  
+  #actions {
+    margin-top: 20px;
+  } */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5dcdc, #fce4ec);
+    text-align: center;
+    padding: 30px;
+    color: #333;
+  }
+  
+  h1 {
+    color: #8b0000;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .pet {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    border: 4px solid transparent;
+  }
+  
+  .pet:hover {
+    transform: scale(1.05);
+    border: 4px solid red;
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+  }
+  
+  #counter {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #444;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #c62828;
+    transform: translateY(-2px);
+  }
+  
+  #actions {
+    margin-top: 30px;
+  }
+  
