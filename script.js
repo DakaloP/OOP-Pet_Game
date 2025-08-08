@@ -1,13 +1,16 @@
 class Pet {
-  constructor(name, sound, image) {
+  constructor(name, soundText, image,soundUrl) {
     this.name = name;
-    this.sound = sound;
+    this.soundText = soundText;
     this.image = image;
+    this.soundUrl = new Audio(soundUrl);//Audio
     this.playCount = 0;
   }
 
   speak() {
-    alert(this.sound);
+    alert(this.soundText);
+    this.soundUrl.currentTime = 0; // ensures restart each click
+    this.soundUrl.play();
   }
 
   play() {
@@ -15,6 +18,7 @@ class Pet {
     this.speak();
     updateCounter(this.playCount);
     showFunActions(this.name);
+    this.soundUrl.play;
   }
 }
 
@@ -24,13 +28,21 @@ let currentPet = null;
 // Function to choose a pet
 function choosePet(type) {
   if (type === 'dog') {
-    currentPet = new Pet('Dog', 'Woof! 🐶', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8x1-7sQlvgNwQSNaGYYqOTvAnyXNZo1wFqw&s');
+    currentPet = new Pet('Dog', 'Woof! 🐶',
+       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8x1-7sQlvgNwQSNaGYYqOTvAnyXNZo1wFqw&s',
+       'Media/small-dog-barking-381828.mp3');
   } else if (type === 'cat') {
-    currentPet = new Pet('Cat', 'Meow! 🐱', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ZNGq9_b4Z0Gw-_HXeJLlI0wOPUJnT020Xg&s');
+    currentPet = new Pet('Cat', 'Meow! 🐱','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ZNGq9_b4Z0Gw-_HXeJLlI0wOPUJnT020Xg&s',
+      'Media/cat-meow-sound-383823.mp3'
+    );
   } else if (type === 'snake') {
-    currentPet = new Pet('Snake', 'Hiss! 🐍', 'https://images.pexels.com/photos/1394938/pexels-photo-1394938.jpeg');
+    currentPet = new Pet('Snake', 'Hiss! 🐍','https://images.pexels.com/photos/1394938/pexels-photo-1394938.jpeg',
+      'Media/snake-hiss-95241.mp3'
+    );
   } else if (type === 'rabbit') {
-    currentPet = new Pet('Rabbit', 'Snore! 🐇', 'https://images.pexels.com/photos/20178218/pexels-photo-20178218.jpeg');
+    currentPet = new Pet('Rabbit', 'Snore! 🐇','https://images.pexels.com/photos/20178218/pexels-photo-20178218.jpeg',
+      'Media/rabbit-sounds-358172.mp3'
+    );
   }
 
   if (currentPet) {
