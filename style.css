@@ -91,7 +91,7 @@
   }
   
   button:hover {
-    background-color: #c62828;
+    background-color: #22bb39;
     transform: translateY(-2px);
   }
   
@@ -99,3 +99,28 @@
     margin-top: 30px;
   }
   
+
+  .navbar {
+    background-color: #e52521; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .nav-links a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
